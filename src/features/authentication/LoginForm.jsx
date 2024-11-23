@@ -27,6 +27,9 @@ function LoginForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
+      <p style={{ fontStyle: "italic", color: "orangered" }}>
+        Note: Use credentials of placeholder to login!
+      </p>
       <FormRowVertical label="Email address">
         <Input
           type="email"
@@ -36,6 +39,7 @@ function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={isLoading}
+          placeholder="monsoon@gmail.com"
         />
       </FormRowVertical>
 
@@ -47,6 +51,7 @@ function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           disabled={isLoading}
+          placeholder="Nepal@123"
         />
       </FormRowVertical>
       <FormRowVertical>
